@@ -158,7 +158,7 @@ function question10(){
     
         //for month format
         let month_m = Math.floor(month);
-        let days_m = Math.floor((day - month_m * 30)/2-4);
+        let days_m = Math.floor((day - month_m * 30)/2);
         let month_f = month_m + 'months ' + days_m + 'days';
         document.getElementById("q10").innerHTML=`Input: 01/07/2018 to 03/05/2020 <br><br> ${year_f}<br><br>${month_f}<br><br>${week}Weeks<br><br>${hour}Hours<br><br>${min}Minutes`;
     }
