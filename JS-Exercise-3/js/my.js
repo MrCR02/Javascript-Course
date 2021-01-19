@@ -3,19 +3,35 @@
 document.getElementById("btnEmail").addEventListener("click", function protectEmail(){
 
     const email = document.getElementById("email").value;
-    const splitted = email.split("@");
-    let firstHalf = Array.from(splitted[0]);
-    const secondHalf = splitted[1];
 
-    // variable to get the no of characters to hide from the email id
-    const toHide = Math.floor(firstHalf.length / 2);
-
-    // loop to encrypt first half of email with * 
-    for(let i = toHide - 1 ; i < firstHalf.length - 1 ; i++){
-        firstHalf[i] = "*";
+    // check if the field is empty
+    if(email === null || email === ""){
+        alert("Enter email");
+        return;
     }
+    else{
+        const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
 
-    document.getElementById("Q1").innerHTML=`Input email: ${email}<br>Encrypted email: ${firstHalf.join("")+"@"+secondHalf}`;
+        // check if the user has entered valid email id
+        if(pattern.test(email)){
+            const splitted = email.split("@");
+            let firstHalf = Array.from(splitted[0]);
+            const secondHalf = splitted[1];
+
+            // variable to get the no of characters to hide from the email id
+            const toHide = Math.floor(firstHalf.length / 2);
+
+            // loop to encrypt first half of email with * 
+            for(let i = toHide - 1 ; i < firstHalf.length - 1 ; i++){
+                firstHalf[i] = "*";
+            }
+
+            document.getElementById("Q1").innerHTML=`Input email: ${email}<br>Encrypted email: ${firstHalf.join("")+"@"+secondHalf}`;
+        }
+        else{
+            alert("Enter valid email please");
+        }
+    }
 });
 
 //-------------- Question 2 ------------------------------
