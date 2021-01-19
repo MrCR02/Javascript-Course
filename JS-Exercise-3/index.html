@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Exercise 3</title>
+    </head>
+    <body>
+        <h2>Question 1</h2>
+            <label>Input Email to encrypt it:</label>
+            <input type="text" name="email" id="email">
+            <button id = "btnEmail" name = "btnEmail">Click me!</button>
+            <p id = "Q1"></p>
+        
+        <h2>Question 2</h2>
+            <label>Input content with html tags:</label>
+            <input type="text" name="removeHtml" id="removeHtml">
+            <button id = "btnHtml" name = " btnHtml">Click to remove!</button>
+            <p id = "Q2"></p>
+
+        <h2>Question 3</h2>
+            <label>Input email to validate:</label>
+            <input type="text" name="vEmail" id="vEmail">
+            <button id = "checkEmail" name = " checkEmail" onclick="validateEmail(document.getElementById('vEmail').value)">Click to check!</button>
+            <p id = "Q2"></p>
+        
+        <h2>Question 4</h2>
+            <p>Enter row and col to draw the table</p>
+            <label>row:</label>
+            <input type="text" name="row" id="row">
+            <label>col:</label>
+            <input type="text" name="column" id="column">
+            <button id = "drawTable" name = "drawTable" onclick="drawTable(document.getElementById('row').value, document.getElementById('column').value)">Click to check!</button>
+            <div id = "tab">
+
+            </div>
+
+        <h2>Task 2</h2>
+        <button onclick="filterPlayers()">Click me!</button>
+            <p id = "task2"> 
+                Please check console for the proper output.
+            </p>
+        <script src = "js/my.js"></script>
+    </body>
+</html>
