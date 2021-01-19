@@ -10,7 +10,7 @@ document.getElementById("btnEmail").addEventListener("click", function protectEm
         return;
     }
     else{
-        const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
+        const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z]{2,4})+$/;
 
         // check if the user has entered valid email id
         if(pattern.test(email)){
@@ -62,7 +62,7 @@ function validateEmail(email){
         return;
     }
     else{
-        const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
+        const pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z]{2,4})+$/;
         if (pattern.test(email))
         {
             alert("This is an email id!")
@@ -75,7 +75,7 @@ function validateEmail(email){
 //-------------- Question 4 ------------------------------
 
 function drawTable(row, col){
-
+    console.time("time");
     //variable to store table body as string then using innerHTML appending it to div tag
     let tab = "<br><table border = '1' style = 'background-color:grey;'>";
 
@@ -94,6 +94,7 @@ function drawTable(row, col){
 //-------------- Task 2 ------------------------------
 
 function filterPlayers(){
+    console.time("time");
     const input = [
     {
         Name: 'Ravindra',
@@ -113,7 +114,6 @@ function filterPlayers(){
 
     // main loop iterates through each element of input
     for(elem in input){
-
         //loop iterate through sports array
         for(sport in input[elem].Sports){
             //check if map aleary has a key of particular sport if not then set the key
@@ -132,5 +132,6 @@ function filterPlayers(){
     console.log(input);
     console.log("Output");
     console.log(result);
+    console.timeEnd("time");
 }
 
