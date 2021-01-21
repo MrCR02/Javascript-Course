@@ -1,0 +1,75 @@
+body {
+    background: white;
+    color: rgb(24, 22, 22);
+}
+#start {
+    width: 100px;
+    height: 50px;
+    border: 3px soldi white;
+    border-radius: 10px;
+    background: green;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+#stop {
+    width: 100px;
+    height: 50px;
+    border: 3px soldi white;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+
+#extra{
+    padding-top: 100px;
+    padding-left: 200px;
+    align-items: center;
+    font-size: 30px;
+
+}
+
+#resume {
+    width: 100px;
+    height: 50px;
+    border: 3px soldi white;
+    border-radius: 10px;
+    background: #f7f305;
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+    outline: none;
+}
+
+#reset {
+    width: 100px;
+    height: 50px;
+    border: 3px soldi white;
+    border-radius: 10px;
+    background: #fac30d;
+    color: rgb(10, 10, 10);;
+    cursor: pointer;
+    outline: none;
+}
+
+#stopwatch {
+    font-size: 100px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+#buttons {
+    position: absolute;
+    top: 55%;
+    left: 48.4%;
+    padding-top: 30px;
+    transform: translate(-51.6%, -45%);
+}
+#buttons li {
+    display: inline;
+    padding-left: 10px;
+}

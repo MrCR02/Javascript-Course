@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            Task 3
+        </title>
+        <script src="js/task3.js"></script>
+    </head>
+    <body>
+        <div>
+            <input type="text" name="fname" id="fname" placeholder="First name" required>
+            <input type="text" name="lname" id="lname" placeholder="Last name" required>
+            <input type="hidden" name="id" id="id">
+            <button id="add" onclick="addData(document.getElementById('fname').value, document.getElementById('lname').value)">Add</button>
+            <button id="update" onclick="updateData(document.getElementById('fname').value, document.getElementById('lname').value, document.getElementById('id').value)"  style="display: none">Update</button>
+            <button id="render" onclick="render2()">Render</button>
+        </div>
+        <div id = "list">
+
+        </div>
+    </body>
+</html>
